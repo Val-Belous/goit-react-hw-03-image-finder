@@ -1,7 +1,14 @@
+import styles from './ImageGallery.module.css';
+
 const ImageGalleryItem = ({ smallImg, largeImg, handlerOpenModal }) => {
   return (
-    <li>
-      <img src={smallImg} alt="" onClick={() => handlerOpenModal(largeImg)} />
+    <li className={styles.item}>
+      <img
+        className={styles.img}
+        src={smallImg}
+        alt="lol"
+        onClick={() => handlerOpenModal(largeImg)}
+      />
     </li>
   );
 };
