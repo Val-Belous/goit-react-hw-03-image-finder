@@ -1,7 +1,12 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import styles from './Modal.module.css';
 
 export class Modal extends Component {
+  static propTypes = {
+    image: PropTypes.string.isRequired,
+    onClose: PropTypes.func.isRequired,
+  };
   componentDidMount() {
     window.addEventListener('keydown', this.onTap);
   }
@@ -9,8 +14,8 @@ export class Modal extends Component {
     window.removeEventListener('keydown', this.onTap);
   }
 
-  onTap = e => {
-    if (e.code === 'Escape') {
+  onTap = evt => {
+    if (evt.code === 'Escape') {
       this.props.onClose();
     }
   };

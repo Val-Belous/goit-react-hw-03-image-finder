@@ -10,7 +10,6 @@ export class App extends Component {
   };
 
   handlerOpenModal = img => {
-    console.log(img);
     this.setState({ image: img });
   };
 
