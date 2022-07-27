@@ -11,8 +11,7 @@ export class Searchbar extends Component {
   };
 
   handlerInput = evt => {
-    const { value } = evt.target;
-    this.setState({ query: value });
+    this.setState({ query: evt.currentTarget.value });
   };
 
   handlerSubmit = evt => {
